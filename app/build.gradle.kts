@@ -44,7 +44,7 @@ java {
 }*/
 
 application {
-    mainClass.set("org.example.CalculatorKt")
+    mainClass.set("org.example.MainKt")
 }
 
 tasks.named<Test>("test") {
