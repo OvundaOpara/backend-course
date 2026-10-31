@@ -38,12 +38,21 @@ java {
     }
 }
 
-application {
+/*application {
     // Define the main class for the application.
     mainClass = "org.example.AppKt"
+}*/
+
+application {
+    mainClass.set("org.example.CalculatorKt")
 }
 
 tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
+}
+
+tasks.named<JavaExec>("run") {
+    //  This is to allow keyboard input
+    standardInput = System.`in`
 }
